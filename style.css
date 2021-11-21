@@ -183,3 +183,24 @@ small {
 .modal-content {
     font-size: 25px;
 }
+
+
+/* Responsive Handling */
+@media (max-width: 767px) {
+    .navbar h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .choose-head {
+        text-align: center;
+    }
+
+    .choose-list a {
+        margin: 20px;
+    }
+
+    .form-container {
+        margin: 25px;
+    }
+}
