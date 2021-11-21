@@ -12,7 +12,7 @@
      <!-- Navbar -->
      <div class="navbar">
         <a href="../index.html"><h2>Multiple Character Ciphers</h2></a>
-        <h2>About Project</h2>
+        <a href="https://en.wikipedia.org/wiki/Caesar_cipher"><h2>About Cipher</h2></a>
     </div>
 
     <!-- Main Content -->
@@ -21,17 +21,69 @@
             <h1>Caesar Cipher</h1>
         </div>
         <div class="form-container">
-            <form type="post">
+            <form id="submitForm">
                 <div class="container">
                     <label for="plainText"><b>Enter The Message :</b></label>
-                    <input type="text" placeholder="Enter Plain Text" name="plainText" required>
+                    <input type="text" id="plainText" placeholder="Enter Plain Text" name="plainText" required>
                     <label for="key"><b>Enter Key (Number of Shifts) :</b></label>
-                    <input type="number" placeholder="Enter Key" name="key" required>
+                    <input type="number" id="key" placeholder="Enter Key" name="key" required>
                 </div>
-                <button class="btn-grad btn-encrypt" type="submit">Emcrypt !</button>
+                <button class="btn-grad btn-encrypt" onclick="caesarCipher()" type="submit">Emcrypt !</button>
             </form>
+        </div>
+        <div class="output" id="output" style="text-align: center; font-size: 30px; margin-top: 15px;">
+
         </div>
     
     </div>
 </body>
+<script>
+    //preventing default
+    var form = document.getElementById("submitForm");
+    function handleForm(e) { e.preventDefault(); } 
+    form.addEventListener('submit', handleForm);
+
+    // main function
+    function caesarCipher() {
+        var plainText = document.getElementById('plainText').value;
+        var key = document.getElementById('key').value;
+
+        console.log(plainText, key);
+
+        if(plainText.length == 0) {
+            alert("Field cannpt be empty");
+            return;
+        }
+
+        key = parseInt(key, 10);
+
+        if(key < 0 || key >= 26){
+			alert("Key is out of range(Range is from 0-26)");
+			return;
+        }
+
+        else {
+            var output = caesarShift(plainText, key);
+
+            var op = document.getElementById('output').innerHTML = "Encrypted Text is : " + output;
+        }
+    }    
+
+    function caesarShift(plainText, key) {
+        var cipherText = "";
+        for(var i=0 ;i< plainText.length; i++) {
+            var ch = plainText.charCodeAt(i);
+				if(65 <= ch && ch <=  90) {
+					cipherText += String.fromCharCode((ch - 65 + key) % 26 + 65); // for Uppercase Unicode
+				} 
+				else if(97 <= ch && ch <= 122){
+					cipherText += String.fromCharCode((ch - 97 + key) % 26 + 97);  // for Lowercase Unicode
+				}
+				else{
+					cipherText += text.charAt(i);
+				}
+		}
+	return cipherText;
+    }  
+</script>
 </html>
