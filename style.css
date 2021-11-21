@@ -161,12 +161,6 @@ a {
     color: black;
 }
 
-.container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 .modal-window > div {
     border-radius: 1rem;
 }
