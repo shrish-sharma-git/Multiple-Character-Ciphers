@@ -1,22 +1,71 @@
 /*  Custom Font */
 @font-face {
-    font-family: 'Command Line';
-    src: url(../Multiple-Character-Ciphers/Assets/Fonts/cmd.ttf);
+    font-family: 'CommandLine';
+    src: url(./Multiple-Character-Ciphers/Assets/cmd.ttf) format('truetype');
 }
 
 /* Default Styling */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body {
-    font-family: 'Command Line';
+html, body {
+    font-family: 'CommandLine';
+    background-color: #000;
+    color: #149414;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    margin: 15px;
+    padding: 25px;
+
+    box-shadow: 0px 1px 10px #9ccc9c;
 }
+
+/* Main */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.choose {
+    margin-top: 50px;
+}
+
+.choose-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.choose-list > button {
+    margin: 20px 0 20px 0;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #000 0%, #149414  51%, #000  100%)}
+    
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    /* box-shadow: 0 0 20px #9ccc9c; */
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
