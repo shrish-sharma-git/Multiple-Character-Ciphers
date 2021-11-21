@@ -1,0 +1,22 @@
+/*  Custom Font */
+@font-face {
+    font-family: 'Command Line';
+    src: url(../Multiple-Character-Ciphers/Assets/Fonts/cmd.ttf);
+}
+
+/* Default Styling */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Command Line';
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
