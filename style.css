@@ -25,6 +25,11 @@ html, body {
     box-shadow: 0px 1px 10px #9ccc9c;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: #149414;
+}
+
 /* Main */
 .main {
     display: flex;
@@ -35,18 +40,24 @@ html, body {
     margin-top: 50px;
 }
 
-.choose-list {
+a {
+    text-decoration: none;
+}
+
+.choose-list a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 25px;   
+    cursor: pointer;
 }
 
-.choose-list > button {
+.choose-list button {
     margin: 20px 0 20px 0;
     text-decoration: none;
-    font-size: larger;
     border: none;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .btn-grad {background-image: linear-gradient(to right, #000 0%, #149414  51%, #000  100%)}
