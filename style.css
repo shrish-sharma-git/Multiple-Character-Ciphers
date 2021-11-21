@@ -1,17 +1,17 @@
 /*  Custom Font */
 @font-face {
     font-family: 'CommandLine';
-    src: url(./Multiple-Character-Ciphers/Assets/cmd.ttf) format('truetype');
+    src: url(./Assets/cmd.woff);
 }
 
 /* Default Styling */
 * {
     box-sizing: border-box;
+    font-family: 'CommandLine';
     margin: 0;
 }
 
 html, body {
-    font-family: 'CommandLine';
     background-color: #000;
     color: #149414;
 }
@@ -45,6 +45,7 @@ html, body {
 .choose-list > button {
     margin: 20px 0 20px 0;
     text-decoration: none;
+    font-size: larger;
     border: none;
 }
 
