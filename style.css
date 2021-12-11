@@ -144,7 +144,7 @@ a {
     font-weight: bold;
 }
 .modal-window h1 {
-    font-size: 150%;
+    font-size: 110%;
     margin: 0 0 15px;
 }
 .modal-close {
@@ -159,7 +159,7 @@ a {
     text-decoration: none;
 }
 .modal-close:hover {
-    color: black;
+    color: #149414;
 }
 
 .modal-window > div {
@@ -168,6 +168,12 @@ a {
 .modal-window div:not(:last-of-type) {
     margin-bottom: 15px;
 }
+
+.modal-window li {
+    padding-bottom: 10px;
+}
+
+
 small {
     color: lightgray;
 }
@@ -203,5 +209,20 @@ small {
 
     .form-container {
         margin: 25px;
+    }
+
+    .modal-window > div {
+        width: 350px;
+        height: 400px;
+    }
+
+    .modal-window h1 {
+        font-size: 90%;
+        margin: 0 0 15px;
+    }
+
+    .modal-window li {
+        padding-bottom: 8px;
+        font-size: 22px;
     }
 }
