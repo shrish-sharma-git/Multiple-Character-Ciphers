@@ -108,13 +108,13 @@
             plaintext = $("#plaintext").val().toLowerCase().replace(/\W/g, '').replace(/[0-9]/g, '')
             key = $("#key").val().toLowerCase().replace(/\W/g, '').replace(/[0-9]/g, '')
             ciphertext = encipherMessage(plaintext, key)
-            $("#output").html(ciphertext)
-        }
+            $("#output").html("Encrypted Text is: " + ciphertext)
+        } 
         function devigenere(){
             ciphertext = $("#plaintext").val().toLowerCase().replace(/\W/g, '').replace(/[0-9]/g, '')
             key = $("#key").val().toLowerCase().replace(/\W/g, '').replace(/[0-9]/g, '')
             plaintext = decipherMessage(ciphertext, key)
-            $("#output").html(plaintext)
+            $("#output").html("Decrypted text is: " + plaintext)
         }
     </script>
 
