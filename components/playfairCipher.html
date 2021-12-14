@@ -150,8 +150,7 @@
             }
             enCodeStr = enCodeStr + coord1 + coord2;
           }
-          document.getElementById("printValue").innerHTML = enCodeStr;
-          // alert("Добавили букву в середине слова? - " + flagAdd);
+          document.getElementById("printValue").innerHTML = "Encrypted Text is: " + enCodeStr;
           return enCodeStr;
         }
         
@@ -243,7 +242,7 @@
           }
           text = text.join('');
           console.log(text);
-          document.getElementById('printDeCode').innerHTML = text;
+          document.getElementById('printDeCode').innerHTML = "Decrypted Text is: " + text;
         }
     </script>
 
